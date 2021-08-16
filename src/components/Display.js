@@ -1,29 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import Loading from "./Loading";
-import Show from "./Show";
+import Loading from "./Loading"
+import Show from "./Show"
 
-import fetchShow from '../api/fetchShow';
+import fetchShow from '../api/fetchShow'
 
 const Display = (props) => {
-    const [show, setShow] = useState(null);
-    const [selectedSeason, setSelectedSeason] = useState("none");
+    const [show, setShow] = useState(null)
+    const [selectedSeason, setSelectedSeason] = useState("none")
 
-    const { displayFunc } = props;
+    const { displayFunc } = props
     const handleClick = () => {
         fetchShow().then(data => {
-            setShow(data);
+            setShow(data)
 
             if (displayFunc) {
-                displayFunc();
+                displayFunc()
             }
 
-        });
+        })
     }
         
     const handleSelect = e => {
-        setSelectedSeason(e.target.value);
-    };
+        setSelectedSeason(e.target.value)
+    }
 
     return (
         <div>
@@ -31,7 +31,7 @@ const Display = (props) => {
             <br/>
             { !show ? <button onClick={handleClick}>Press to Get Show Data</button> :<Show show={show} selectedSeason={selectedSeason} handleSelect={handleSelect}/> }
         </div>
-    );
+    )
 }
 
-export default Display;
+export default Display

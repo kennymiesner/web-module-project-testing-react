@@ -1,9 +1,9 @@
-import React from 'react';
-import Episodes from "./Episodes";
-import Loading from './Loading';
+import React from 'react'
+import Episodes from "./Episodes"
+import Loading from './Loading'
 
 const Show = (props) => {
-    const { handleSelect, selectedSeason, show } = props;
+    const { handleSelect, selectedSeason, show } = props
     
     if (!show)
       return <Loading />
@@ -17,7 +17,7 @@ const Show = (props) => {
           <option value="none"></option>
           {
             show.seasons.map(season=>{
-              return(<option data-testid="season-option" key={season.id} value={season.id}>{season.name}</option>);
+              return(<option data-testid="season-option" key={season.id} value={season.id}>{season.name}</option>)
             })
           }
         </select>
@@ -25,7 +25,7 @@ const Show = (props) => {
         {
             (selectedSeason !== "none") && <Episodes episodes={show.seasons[selectedSeason].episodes} />
         }
-    </div>);
+    </div>)
 }
 
-export default Show;
+export default Show

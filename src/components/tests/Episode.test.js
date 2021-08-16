@@ -1,6 +1,6 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import Episode from './../Episode';
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import Episode from './../Episode'
 
 const testEpisode = {
     id:1,
@@ -18,11 +18,11 @@ const testEpisodeWithoutImage = {
 
 test("renders without error", () => {
 
-});
+})
 
 test("renders the summury test passed as prop", ()=>{
     
-});
+})
 
 test("renders default image when image is not defined", ()=>{
     
