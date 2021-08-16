@@ -45,7 +45,6 @@ test('renders Loading component when prop show is null', () => {
 test('renders same number of options seasons are passed in', () => {
   render(<Show show={testShow} selectedSeason='none' />)
   const dropdown = screen.getByRole('combobox')
-  userEvent.click(dropdown)
   expect(dropdown).toHaveLength(5)
 })
 
