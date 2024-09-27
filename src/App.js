@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
-import Display from "./components/Display";
+import Display from "./components/Display"
 
-import "./styles.css";
+import "./styles.css"
 
 export default function App() {
   const displayFunc = (data)=> {
-    console.log(data);
+    console.log(data)
   }
 
   return (
@@ -18,5 +18,5 @@ export default function App() {
         <Display displayFun={displayFunc}/>
       </div>
     </div>
-  );
+  )
 }
